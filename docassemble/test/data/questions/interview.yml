@@ -1,3 +1,4 @@
+---
 mandatory: True
 code: |
     if question_worked:
