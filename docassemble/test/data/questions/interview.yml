@@ -1,0 +1,13 @@
+mandatory: True
+code: |
+    if question_worked:
+        user_informed_question_worked
+---
+question: |
+    Did this test work?
+yesno: question_worked
+---
+question: |
+    It worked!
+sets: user_informed_question_worked
+---
