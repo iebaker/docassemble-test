@@ -1,4 +1,7 @@
 ---
+imports:
+    - json
+---
 features:
     javascript: script.js 
     css: style.css
@@ -6,6 +9,10 @@ features:
 mandatory: True
 code: |
     if demo_chosen == "Javascript":
+        interview_data = {
+            'favorite_color': favorite_color,
+            'favorite_city': favorite_city
+        }
         user_shown_javascript_demo
     elif demo_chosen == "CSS":
         user_shown_css_demo
@@ -20,7 +27,7 @@ buttons:
 question: |
     Here's a fun thing with Javascript!
 subquestion: |
-    <div onclick="showAlert()">Click Me</div>
+    <div onclick="showAlert(${ json.dumps(interview_data) })">Click Me</div>
 sets: user_shown_javascript_demo
 ---
 question: |
@@ -28,4 +35,21 @@ question: |
 subquestion: |
     <span class="custom-class">This is styled with custom CSS</span>
 sets: user_shown_css_demo
+---
+question: |
+    What is your favorite color?
+field: favorite_color
+choices: 
+    - Red
+    - Green
+    - Blue
+---
+question: |
+    What is your favorite city?
+field: favorite_city
+choices: 
+    - New York
+    - London
+    - Paris
+    - Madrid
 ---
