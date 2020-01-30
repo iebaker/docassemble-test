@@ -1,14 +1,31 @@
 ---
+features:
+    javascript: script.js 
+    css: style.css
+---
 mandatory: True
 code: |
-    if question_worked:
-        user_informed_question_worked
+    if demo_chosen == "Javascript":
+        user_shown_javascript_demo
+    elif demo_chosen == "CSS"
+        user_shown_css_demo
 ---
 question: |
-    Did this test work?
-yesno: question_worked
+    Which demo would you like to see?
+field: demo_chosen
+buttons:
+    - Javascript 
+    - CSS
 ---
 question: |
-    It worked!
-sets: user_informed_question_worked
+    Here's a fun thing with Javascript!
+subquestion: |
+    <div onclick="showAlert()">Click Me</div>
+sets: user_shown_javascript_demo
+---
+question: |
+    Here's a fun thing with CSS 
+subquestion: |
+    <span class="custom-class">This is styled with custom CSS</span>
+sets: user_shown_css_demo
 ---
