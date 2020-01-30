@@ -7,7 +7,7 @@ mandatory: True
 code: |
     if demo_chosen == "Javascript":
         user_shown_javascript_demo
-    elif demo_chosen == "CSS"
+    elif demo_chosen == "CSS":
         user_shown_css_demo
 ---
 question: |
