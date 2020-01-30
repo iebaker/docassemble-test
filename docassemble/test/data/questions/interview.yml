@@ -27,7 +27,7 @@ buttons:
 question: |
     Here's a fun thing with Javascript!
 subquestion: |
-    <div onclick="showAlert(${ json.dumps(interview_data) })">Click Me</div>
+    <div onclick='showAlert(${ json.dumps(interview_data) })'>Click Me</div>
 sets: user_shown_javascript_demo
 ---
 question: |
