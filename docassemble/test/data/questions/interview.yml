@@ -28,13 +28,13 @@ question: |
     Here's a fun thing with Javascript!
 subquestion: |
     <div onclick='showAlert(${ json.dumps(interview_data) })'>Click Me</div>
-sets: user_shown_javascript_demo
+continue button field: user_shown_javascript_demo
 ---
 question: |
     Here's a fun thing with CSS 
 subquestion: |
     <span class="custom-class">This is styled with custom CSS</span>
-sets: user_shown_css_demo
+continue button field: user_shown_css_demo
 ---
 question: |
     What is your favorite color?
