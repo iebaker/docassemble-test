@@ -7,9 +7,9 @@ function showAlert(interview_data) {
 
 var map;
 var placesService;
+var mumbai = new google.maps.LatLng(19.0760, 72.8777);
 
 function initMap() {
-    var mumbai = new google.maps.LatLng(19.0760, 72.8777);
     map = new google.maps.Map(document.getElementById('map'), { center: mumbai, zoom: 8 });
     placesService = new google.maps.places.PlacesService(map);
 }
