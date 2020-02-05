@@ -8,14 +8,14 @@ features:
 ---
 mandatory: True
 code: |
+    interview_data = dict()
     if demo_chosen == "Javascript":
-        interview_data = {
-            'favorite_color': favorite_color,
-            'favorite_city': favorite_city
-        }
+        interview_data['favorite_color'] = favorite_color
+        interview_data['favorite_city'] = favorite_city
         user_shown_javascript_demo
     elif demo_chosen == "CSS":
         user_shown_css_demo
+    user_shown_map
 ---
 question: |
     Which demo would you like to see?
@@ -53,3 +53,14 @@ choices:
     - Paris
     - Madrid
 ---
+question: |
+    Enter Google Cloud API Key
+fields: 
+    - Key: google_cloud_api_key
+---
+question: |
+    Map Example!
+subquestion: |
+    <div id="map">
+    <script src='https://maps.googleapis.com/maps/api/js?key=${ google_cloud_api_key }&callback=initMap' async defer></script>
+sets: user_shown_map
