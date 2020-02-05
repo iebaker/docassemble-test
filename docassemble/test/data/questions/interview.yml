@@ -73,6 +73,6 @@ subquestion: |
         defer
     ></script>
     <script>
-        searchAndAddMarker(${ location_query_string });
+        searchAndAddMarker('${ location_query_string }');
     </script>
 sets: user_shown_map
