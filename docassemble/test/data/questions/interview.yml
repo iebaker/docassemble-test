@@ -64,12 +64,11 @@ fields:
     - Location: location_query_string
 ---
 question: |
-    Map Example!
+    Map Example for ${ location_query_string }!
 subquestion: |
-    Results for ${ location_query_string }:
     <div id="map">
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=${ google_cloud_api_key }&callback=initMap&libraries=places"
+        src='https://maps.googleapis.com/maps/api/js?key=${ google_cloud_api_key }&callback=initMap&libraries=places'
         async
         defer
     ></script>
