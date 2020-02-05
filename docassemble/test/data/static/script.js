@@ -5,18 +5,10 @@ function showAlert(interview_data) {
     alert("Your favorite color is " + favorite_color + " and your favorite city is " + favorite_city);
 }
 
-var map;
-var placesService;
-var mumbai;
-
-function initMap() {
-    mumbai = new google.maps.LatLng(19.0760, 72.8777);
-    map = new google.maps.Map(document.getElementById('map'), { center: mumbai, zoom: 8 });
-    placesService = new google.maps.places.PlacesService(map);
-}
-
-function searchAndAddMarker(query) {
-    var mumbaiLocationBias = { radius: 80000, center: mumbai };
+function initMap(query) {
+    var mumbai = new google.maps.LatLng(19.0760, 72.8777);
+    var map = new google.maps.Map(document.getElementById('map'), { center: mumbai, zoom: 8 });
+    var placesService = new google.maps.places.PlacesService(map);var mumbaiLocationBias = { radius: 80000, center: mumbai };
     var request = {
         query: query,
         fields: ['name', 'geometry'],

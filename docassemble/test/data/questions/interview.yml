@@ -68,11 +68,8 @@ question: |
 subquestion: |
     <div id="map">
     <script
-        src='https://maps.googleapis.com/maps/api/js?key=${ google_cloud_api_key }&callback=initMap&libraries=places'
+        src='https://maps.googleapis.com/maps/api/js?key=${ google_cloud_api_key }&callback=initMap('${ location_query_string }')&libraries=places'
         async
         defer
     ></script>
-    <script>
-        searchAndAddMarker('${ location_query_string }');
-    </script>
 sets: user_shown_map
